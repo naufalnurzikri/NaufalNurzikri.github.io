@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  background-image: url('./S__53952536.jpg');
+  min-height: 100vh;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "open sans", Courier, monospace;
+  font-size: 25px;
+}
+
+.topleft {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  top: 0;
+  left: 16px;
+  margin-left: 5%;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  font-size: 12pt;
+  text-align: center;
+  min-width: 80vh;
+  margin-left: 30.5%;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 6;
+}
+
+.circle1 {
+  height: 20rem;
+  width: 35rem;
+  background: linear-gradient(to right bottom, rgba(94, 91, 91, 0.7), rgba(94, 91, 91, 0.7));
+  position: absolute;
+  border-radius: 2rem;
+  z-index: 5;
+  backdrop-filter: blur(0.1rem);
+  left: 38%;
+  top: 35%;
+}
+
+.container {
+    background: linear-gradient(to right bottom, rgb(0, 0, 0), rgb(0, 0, 0));
+    width: 100%;
+    height: 20%;
+    position: absolute;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <b>Still Waiting</b>
+  </div>
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+<p id="demo"></p>
+  </div>
+  <div class="bottomleft">
+    <b>Stay tuned for something Awesome</b>
+  </div>
+  <div class="circle1"></div>
+</div>
+<div class="container">
+</div>
+<figure>
+    <figcaption>Autoplay.exe</figcaption>
+    <audio
+        controls autoplay
+        src="./y2meta.com - TULUS - Hati-Hati di Jalan (Official Lyric Video) (128 kbps).mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+
+</div>
+
+
+<!-- Display the countdown timer in an element -->
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("March 07, 2022 09:00:00 AM").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementsByClassName("middle")[0].innerHTML = "<p>Hello Angie</p><p>Morning Sunshine!</p><p>I hope u Happy today. Hehe.</p>"
+    document.getElementById("demo").innerHTML = "<p>Hello Angie</p><p>Morning Sunshine!</p><p>I hope u Happy today. Hehe.</p>";
+  }
+}, 1000);
+</script>
+</body>
+</html>
